@@ -7,4 +7,6 @@ Technologies used:
 5. View Model
 6. Databinding
 
-![Screenshot](https://raw.githubusercontent.com/RumiRajbhandari/ArchitectureComponentSample/readme/device-2018-06-04-171811.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/RumiRajbhandari/ArchitectureComponentSample/readme/device-2018-06-04-171811.png" width="250"/>
+</p>
