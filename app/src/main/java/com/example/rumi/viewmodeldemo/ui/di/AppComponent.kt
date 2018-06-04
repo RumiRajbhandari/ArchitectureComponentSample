@@ -2,6 +2,7 @@ package com.example.rumi.viewmodeldemo.ui.di
 
 import android.app.Application
 import com.example.rumi.viewmodeldemo.DemoApplication
+import com.example.rumi.viewmodeldemo.data.remote.ApiModule
 import com.example.rumi.viewmodeldemo.mainActivity.UserActivityModule
 import dagger.BindsInstance
 import dagger.Component
@@ -17,8 +18,8 @@ import javax.inject.Singleton
     (AndroidSupportInjectionModule::class),
     (ApplicationModule::class),
     (ViewModelModule::class),
-    (ActivityBindingModule::class)
-
+    (ActivityBindingModule::class),
+    (ApiModule::class)
     ])
     interface AppComponent : AndroidInjector<DemoApplication> {
         @Component.Builder

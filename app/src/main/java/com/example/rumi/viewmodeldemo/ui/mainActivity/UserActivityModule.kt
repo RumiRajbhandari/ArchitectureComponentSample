@@ -1,9 +1,9 @@
 package com.example.rumi.viewmodeldemo.mainActivity
 
-import com.example.rumi.viewmodeldemo.data.remote.UserRemote
-import com.example.rumi.viewmodeldemo.data.remote.UserRemoteImpl
-import com.example.rumi.viewmodeldemo.data.repository.Repository
-import com.example.rumi.viewmodeldemo.data.repository.RepositoryImpl
+import com.example.rumi.viewmodeldemo.data.remote.user.UserRemote
+import com.example.rumi.viewmodeldemo.data.remote.user.UserRemoteImpl
+import com.example.rumi.viewmodeldemo.data.repository.UserRepository
+import com.example.rumi.viewmodeldemo.data.repository.UserRepositoryImpl
 import com.example.rumi.viewmodeldemo.ui.di.qualifier.Remote
 import dagger.Module
 import dagger.Provides
@@ -21,7 +21,7 @@ open class UserActivityModule {
     }
 
     @Provides
-    internal fun provideUserRepository(repository: RepositoryImpl): Repository {
+    internal fun provideUserRepository(repository: UserRepositoryImpl): UserRepository {
         return repository
     }
 

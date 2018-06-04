@@ -18,12 +18,11 @@ class UserActivity : DaggerAppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var viewModel=ViewModelProviders.of(this,viewModelFactory)[UserActivityViewModel::class.java]
+        var viewModel = ViewModelProviders.of(this, viewModelFactory)[UserActivityViewModel::class.java]
         viewModel.let {
             lifecycle.addObserver(it)
         }
-        viewModel.getUserList().observe(this, Observer { text_user.text=it.toString() })
-
+        viewModel.userList.observe(this, Observer { text_user.text = it.toString() })
 
     }
 }
