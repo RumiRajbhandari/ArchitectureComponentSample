@@ -39,6 +39,8 @@ dependencies {
     def rxRetroAdapter = '1.0.0'
     def rxAdapter = '2.2.0'
     def stethoVersion = "1.5.0"
+    def dataBindingVersion = "2.3.1"
+    def roomVersion = "1.1.0"
 
 
 
@@ -79,7 +81,13 @@ dependencies {
     implementation "com.facebook.stetho:stetho:$stethoVersion"
     implementation "com.facebook.stetho:stetho-okhttp3:$stethoVersion"
 
-    kapt 'com.android.databinding:compiler:2.3.1'
+    kapt "com.android.databinding:compiler:$dataBindingVersion"
+
+    implementation "android.arch.persistence.room:runtime:$roomVersion"
+    kapt "android.arch.persistence.room:compiler:$roomVersion"
+    implementation "android.arch.persistence.room:rxjava2:$roomVersion"
+
+
 
 
     testImplementation 'junit:junit:4.12'

@@ -1,5 +1,6 @@
 package com.example.rumi.viewmodeldemo.data.repository
 
+import android.arch.lifecycle.LiveData
 import com.example.rumi.viewmodeldemo.domain.User
 import io.reactivex.Observable
 
@@ -8,4 +9,5 @@ import io.reactivex.Observable
  */
 interface UserRepository {
     fun getUserList(): Observable<List<User>>
+    fun getLocalUserList(): LiveData<List<User>>
 }

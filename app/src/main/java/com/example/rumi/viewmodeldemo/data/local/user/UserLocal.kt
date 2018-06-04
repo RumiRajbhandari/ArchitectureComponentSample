@@ -1,4 +1,4 @@
-package com.example.rumi.viewmodeldemo.data.local
+package com.example.rumi.viewmodeldemo.data.local.user
 
 import android.arch.lifecycle.LiveData
 import com.example.rumi.viewmodeldemo.domain.User
@@ -8,5 +8,6 @@ import com.example.rumi.viewmodeldemo.domain.User
  */
 interface UserLocal {
     fun getUserList(): LiveData<List<User>>
+    fun insertAllUserList(userList:List<User>)
 
 }
