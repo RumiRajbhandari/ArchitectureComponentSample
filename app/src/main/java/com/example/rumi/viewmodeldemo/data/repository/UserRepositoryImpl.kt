@@ -1,6 +1,6 @@
 package com.example.rumi.viewmodeldemo.data.repository
 
-import android.arch.lifecycle.LiveData
+import android.arch.paging.DataSource
 import com.example.rumi.viewmodeldemo.data.local.user.UserLocal
 import com.example.rumi.viewmodeldemo.data.remote.user.UserRemote
 import com.example.rumi.viewmodeldemo.domain.User
@@ -19,7 +19,7 @@ class UserRepositoryImpl @Inject constructor(@Remote private val userRemote: Use
                 .doOnNext{userLocal.insertAllUserList(it)}
     }
 
-    override fun getLocalUserList(): LiveData<List<User>> {
+    override fun getLocalUserList(): DataSource.Factory<Int,User> {
         return userLocal.getUserList()
     }
 }

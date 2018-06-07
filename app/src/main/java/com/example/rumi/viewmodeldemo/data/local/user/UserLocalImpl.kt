@@ -1,6 +1,6 @@
 package com.example.rumi.viewmodeldemo.data.local.user
 
-import android.arch.lifecycle.LiveData
+import android.arch.paging.DataSource
 import com.example.rumi.viewmodeldemo.data.local.DatabaseManager
 import com.example.rumi.viewmodeldemo.domain.User
 import javax.inject.Inject
@@ -10,7 +10,7 @@ import javax.inject.Inject
  */
 class UserLocalImpl @Inject constructor(private val databaseManager: DatabaseManager): UserLocal {
 
-    override fun getUserList(): LiveData<List<User>> {
+    override fun getUserList(): DataSource.Factory<Int,User> {
         return databaseManager.getUserDao().getAllUsers()
 
     }

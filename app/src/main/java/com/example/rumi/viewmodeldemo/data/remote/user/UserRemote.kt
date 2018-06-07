@@ -8,4 +8,5 @@ import io.reactivex.Observable
  */
 interface UserRemote {
     fun getUserList(): Observable<List<User>>
+
 }

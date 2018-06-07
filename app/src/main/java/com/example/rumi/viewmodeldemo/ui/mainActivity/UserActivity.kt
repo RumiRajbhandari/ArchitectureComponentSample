@@ -36,11 +36,14 @@ class UserActivity : BaseActivity() {
         binding.recyclerView.layoutManager=linearLayoutManager
 
 
-        viewModel.userList.observe(this, Observer {
+        viewModel.getLocalUserList().observe(this, Observer {
             if (it!=null){
-                val userAdapter=UserAdapter(this,it)
+                val userAdapter=UserAdapter(this,it){
+                    user, i ->
+                    println("clicked user is $user")
+                    return@UserAdapter user
+                }
                 binding.recyclerView.adapter=userAdapter
-
             }
         })
 
